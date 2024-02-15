@@ -1,0 +1,3 @@
+class PoupeeRusse extends Poupee {
+
+}
