@@ -50,7 +50,12 @@ public class PoupeeRusse extends Poupee {
 
     @Override
     public void Close() {
-
+        if(this.getIsOpen()){
+            this.setIsOpen(false);
+            System.out.println("La poupée "+this.getName()+" a été fermer avec succes");
+        } else {
+            System.out.println("la poupée "+this.getName()+" est déja fermer");
+        }
     }
 
     @Override
