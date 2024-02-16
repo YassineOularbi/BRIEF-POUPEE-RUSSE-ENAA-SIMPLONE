@@ -109,19 +109,15 @@ public class PoupeeRusse extends Poupee {
         if(!(poupeeRusse.getContainsDoll() == null)){
             System.out.println("Impossible de placer dans cette poupée");
             System.out.println("Cette poupée "+ poupeeRusse.getName()+" contient déja la poupée"+ poupeeRusse.getContainsDoll().getName()+", veuillez le vider!");
-        }
-        if (!(this.getIntoDoll() == null)){
+        } else if (!(this.getIntoDoll() == null)){
             System.out.println("Cette poupée "+this.getName()+" deja dans la poupée "+this.getIntoDoll().getName());
-        }
-        if(!poupeeRusse.getIsOpen()){
+        } else if(!poupeeRusse.getIsOpen()){
             System.out.println("Impossible de placer dans cette poupée");
             System.out.println("La poupée "+poupeeRusse.getName()+" est fermer veuiller l'ouvrir");
-        }
-        if(this.getTaille() > p.getTaille()){
+        } else if(this.getTaille() > p.getTaille()){
             System.out.println("Impossible de placer dans cette poupée");
-            System.out.println("La taille de la poupée "+poupeeRusse.getName()+" est petite" +poupeeRusse.getTaille());
-        }
-        if(poupeeRusse.getContainsDoll()== null && this.getIntoDoll()==null && poupeeRusse.getIsOpen()){
+            System.out.println("La taille de la poupée "+poupeeRusse.getName()+" est petite " +poupeeRusse.getTaille());
+        } else {
             poupeeRusse.setContainsDoll(this);
             this.setIntoDoll(poupeeRusse);
             System.out.println("la poupée "+this.getName()+" est placée dans "+poupeeRusse.getName());
@@ -133,20 +129,16 @@ public class PoupeeRusse extends Poupee {
         if(poupeeRusse.getContainsDoll() == null){
             System.out.println("Impossible de sortir de cette poupée");
             System.out.println("Cette poupée est vide!");
-        }
-        if(!poupeeRusse.getIsOpen()){
-            System.out.println("Impossible de sortir de cette poupée");
-            System.out.println("La poupée "+poupeeRusse.getName()+"est fermer veuiller l'ouvrir");
-        }
-        if (this.getIntoDoll()== null){
+        }else if (this.getIntoDoll()== null){
             System.out.println("Impossible de sortir de cette poupée");
             System.out.println("Cette poupée "+this.getName()+" n'est jamais placer dans une autre!");
-        }
-        if(!(this.getName().equals(poupeeRusse.getContainsDoll().getName()))){
+        } else if(!(this.getName().equals(poupeeRusse.getContainsDoll().getName()))){
             System.out.println("Cette poupée ne contient pas la poupée "+this.getName());
             System.out.println("Cette poupée contient la poupée "+poupeeRusse.getContainsDoll().getName()+" ,Veuillez la vider !");
-        }
-        if(!(poupeeRusse.getContainsDoll()==null) && poupeeRusse.getIsOpen() && !(this.getIntoDoll()==null) && this.getName().equals(poupeeRusse.getContainsDoll().getName())){
+        }else if(!poupeeRusse.getIsOpen()){
+            System.out.println("Impossible de sortir de cette poupée");
+            System.out.println("La poupée "+poupeeRusse.getName()+"est fermer veuiller l'ouvrir");
+        } else {
             poupeeRusse.setContainsDoll(null);
             this.setIntoDoll(null);
             System.out.println("la poupée "+this.getName()+" est sortir de "+poupeeRusse.getName());
