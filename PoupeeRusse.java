@@ -1,10 +1,6 @@
 import java.util.Scanner;
 
 public class PoupeeRusse extends Poupee {
-    public PoupeeRusse(){
-        super();
-    }
-    PoupeeRusse oopPoupeeRusse = new PoupeeRusse();
     private String Name;
     private String Color;
     private Boolean isOpen;

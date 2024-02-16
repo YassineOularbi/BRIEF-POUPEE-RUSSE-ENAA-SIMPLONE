@@ -42,3 +42,5 @@ Ce projet a été développé par [Yassine OULARBI], sous la supervision de l'é
 Pour toute question ou commentaire, veuillez contacter [yassineoularbi4@gmail.com] ou [+212 6 10 44 60 80].
 
 LinkedIn : "www.linkedin.com/in/yassine-oularbi-79730424b"
+
+Plannification Trello : "https://trello.com/b/1fQHhE9z/brief-poupee-russe-enaa-simplone"

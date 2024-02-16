@@ -3,8 +3,6 @@ public abstract class Poupee {
     public Poupee (int taille){
             this.Taille = taille;
     }
-    public Poupee(){}
-
     public int getTaille(){
         return Taille;
     }
