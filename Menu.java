@@ -8,7 +8,7 @@ public class Menu {
 
     public void MenuInterface() {
 
-        int Choix = 4;
+        int Choix;
         do {
             System.out.println("+------------------------------------+");
             System.out.println("| Bienvenue dans Le jeu Poupée Russe |");
@@ -47,6 +47,8 @@ public class Menu {
                     oopPoupeeRusse3.DisplayRussianDoll();
                     break;
                 case 3:
+                    GameInterface();
+                    break;
                 case 4:
                     System.out.println("+------------------------------------+");
                     System.out.println("| Vous avez quitté le jeu, à bientot |");
@@ -58,5 +60,150 @@ public class Menu {
             }
         } while (Choix != 4);
 
+    }
+    public void GameInterface (){
+        int ChoixGame;
+        do {
+            System.out.println("+------------------------------------+");
+            System.out.println("|      Aller, jouer poupée russe     |");
+            System.out.println("+------------------------------------+");
+            System.out.println("|      1. Ouvrir une poupée.         |");
+            System.out.println("|      2. Fermer une poupée.         |");
+            System.out.println("|      3. Placer dans.               |");
+            System.out.println("|      4. Sortir de.                 |");
+            System.out.println("|      5. Retourner au menu.         |");
+            System.out.println("+------------------------------------+");
+            System.out.print("          Entrez un choix : ");
+            ChoixGame = scanner.nextInt();
+            switch (ChoixGame) {
+                case 1:
+                    int ChoixOpen;
+                    System.out.println("+------------------------------------+");
+                    System.out.println("|       ouvrir une Poupée Russe      |");
+                    System.out.println("+------------------------------------+");
+                    System.out.println("| choisir la poupée a ouvrir 1,2 ou 3|");
+                    System.out.println("+------------------------------------+");
+                    System.out.print("          Entrez un choix : ");
+                    ChoixOpen = scanner.nextInt();
+                    switch (ChoixOpen){
+                        case 1 :
+                            oopPoupeeRusse1.Open();
+                            break;
+                        case 2 :
+                            oopPoupeeRusse2.Open();
+                            break;
+                        case 3 :
+                            oopPoupeeRusse3.Open();
+                            break;
+                        default:
+                            System.out.println("|      Entrez un choix valid !       |");
+                            break;
+                    }
+                    break;
+                case 2:
+                    int ChoixClose;
+                    System.out.println("+------------------------------------+");
+                    System.out.println("|       fermer une Poupée Russe      |");
+                    System.out.println("+------------------------------------+");
+                    System.out.println("| choisir la poupée a fermer 1,2 ou 3|");
+                    System.out.println("+------------------------------------+");
+                    System.out.print("          Entrez un choix : ");
+                    ChoixClose = scanner.nextInt();
+                    switch (ChoixClose){
+                        case 1 :
+                            oopPoupeeRusse1.Close();
+                            break;
+                        case 2 :
+                            oopPoupeeRusse2.Close();
+                            break;
+                        case 3 :
+                            oopPoupeeRusse3.Close();
+                            break;
+                        default:
+                            System.out.println("|      Entrez un choix valid !       |");
+                            break;
+                    }
+                    break;
+                case 3:
+                    int ChoixPlaceIn;
+                    System.out.println("+------------------------------------+");
+                    System.out.println("|       Placer une Poupée Russe      |");
+                    System.out.println("+------------------------------------+");
+                    System.out.println("|  1. Placer poupée 1 dans poupée 2. |");
+                    System.out.println("|  2. Placer poupée 1 dans poupée 3. |");
+                    System.out.println("|  3. Placer poupée 2 dans poupée 1. |");
+                    System.out.println("|  4. Placer poupée 2 dans poupée 3. |");
+                    System.out.println("|  5. Placer poupée 3 dans poupée 1. |");
+                    System.out.println("|  6. Placer poupée 3 dans poupée 2. |");
+                    System.out.println("+------------------------------------+");
+                    System.out.print("          Entrez un choix : ");
+                    ChoixPlaceIn = scanner.nextInt();
+                    switch (ChoixPlaceIn){
+                        case 1 :
+                            oopPoupeeRusse1.PlaceInto(oopPoupeeRusse2);
+                            break;
+                        case 2 :
+                            oopPoupeeRusse1.PlaceInto(oopPoupeeRusse3);
+                            break;
+                        case 3 :
+                            oopPoupeeRusse2.PlaceInto(oopPoupeeRusse1);
+                            break;
+                        case 4 :
+                            oopPoupeeRusse2.PlaceInto(oopPoupeeRusse3);
+                            break;
+                        case 5 :
+                            oopPoupeeRusse3.PlaceInto(oopPoupeeRusse1);
+                            break;
+                        case 6 :
+                            oopPoupeeRusse3.PlaceInto(oopPoupeeRusse2);
+                            break;
+                        default:
+                            System.out.println("|      Entrez un choix valid !       |");
+                            break;
+                    }
+                    break;
+                case 4:
+                    int ChoixLeave;
+                    System.out.println("+------------------------------------+");
+                    System.out.println("|       Sortir une Poupée Russe      |");
+                    System.out.println("+------------------------------------+");
+                    System.out.println("|  1. Sortir poupée 1 dans poupée 2. |");
+                    System.out.println("|  2. Sortir poupée 1 dans poupée 3. |");
+                    System.out.println("|  3. Sortir poupée 2 dans poupée 1. |");
+                    System.out.println("|  4. Sortir poupée 2 dans poupée 3. |");
+                    System.out.println("|  5. Sortir poupée 3 dans poupée 1. |");
+                    System.out.println("|  6. Sortir poupée 3 dans poupée 2. |");
+                    System.out.println("+------------------------------------+");
+                    System.out.print("          Entrez un choix : ");
+                    ChoixLeave = scanner.nextInt();
+                    switch (ChoixLeave){
+                        case 1 :
+                            oopPoupeeRusse1.Leave(oopPoupeeRusse2);
+                            break;
+                        case 2 :
+                            oopPoupeeRusse1.Leave(oopPoupeeRusse3);
+                            break;
+                        case 3 :
+                            oopPoupeeRusse2.Leave(oopPoupeeRusse1);
+                            break;
+                        case 4 :
+                            oopPoupeeRusse2.Leave(oopPoupeeRusse3);
+                            break;
+                        case 5 :
+                            oopPoupeeRusse3.Leave(oopPoupeeRusse1);
+                            break;
+                        case 6 :
+                            oopPoupeeRusse3.Leave(oopPoupeeRusse2);
+                            break;
+                        default:
+                            System.out.println("|      Entrez un choix valid !       |");
+                            break;
+                    }
+                    break;
+                default:
+                    System.out.println("|      Entrez un choix valid !       |");
+                    break;
+            }
+        }while (ChoixGame != 5);
     }
 }
