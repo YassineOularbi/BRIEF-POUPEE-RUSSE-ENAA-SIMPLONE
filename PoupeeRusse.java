@@ -78,5 +78,11 @@ public class PoupeeRusse extends Poupee {
         Boolean newisOpen = scanner.nextBoolean();
         this.setIsOpen(newisOpen);
     }
-
+    @Override
+    public void DisplayRussianDoll() {
+        System.out.println("| -> Name : "+this.getName());
+        System.out.println("| -> Couleur : "+this.getColor());
+        System.out.println("| -> Taille : "+this.getTaille());
+        System.out.println("| -> ouverte : "+this.getIsOpen());
+    }
 }
