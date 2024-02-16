@@ -4,6 +4,7 @@ public class PoupeeRusse extends Poupee {
     private String Name;
     private String Color;
     private Boolean isOpen;
+    private Boolean containsDoll;
     public PoupeeRusse(String SuperName, String SuperColor, int SuperTaille, Boolean SuperisOpen){
         super(SuperTaille);
         this.Name = SuperName;
@@ -37,6 +38,12 @@ public class PoupeeRusse extends Poupee {
     public void setIsOpen(Boolean isopen){
         this.isOpen = isopen;
     }
+    public Boolean getContainsDoll() {
+        return containsDoll;
+    }
+    public void setContainsDoll(Boolean containsDoll) {
+        this.containsDoll = containsDoll;
+    }
 
     @Override
     public void Open() {
@@ -60,7 +67,23 @@ public class PoupeeRusse extends Poupee {
 
     @Override
     public void PlaceInto(Poupee p) {
-
+        PoupeeRusse poupeeRusse = (PoupeeRusse) p;
+        if(poupeeRusse.getContainsDoll()){
+            System.out.println("Impossible de placer dans cette poupée");
+            System.out.println("Cette poupée contient déja une poupée veuillez le vider!");
+        }
+        if(!poupeeRusse.getContainsDoll() && poupeeRusse.getIsOpen() && this.getTaille() < p.getTaille()){
+            poupeeRusse.setContainsDoll(true);
+            System.out.println("la poupée "+this.getName()+" est placée dans "+poupeeRusse.getName());
+        }
+        if(!poupeeRusse.getIsOpen()){
+            System.out.println("Impossible de placer dans cette poupée");
+            System.out.println("La poupée est fermer veuiller l'ouvrir");
+        }
+        if(this.getTaille() > p.getTaille()){
+            System.out.println("Impossible de placer dans cette poupée");
+            System.out.println("La taille de la poupée est petite");
+        }
     }
 
     @Override
