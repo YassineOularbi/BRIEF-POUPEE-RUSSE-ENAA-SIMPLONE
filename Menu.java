@@ -199,6 +199,8 @@ public class Menu {
                             System.out.println("|      Entrez un choix valid !       |");
                             break;
                     }
+                case 5 :
+                    MenuInterface();
                     break;
                 default:
                     System.out.println("|      Entrez un choix valid !       |");
