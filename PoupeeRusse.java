@@ -4,6 +4,7 @@ public class PoupeeRusse extends Poupee {
     public PoupeeRusse(){
         super();
     }
+    PoupeeRusse oopPoupeeRusse = new PoupeeRusse();
     private String Name;
     private String Color;
     private Boolean isOpen;
@@ -60,23 +61,22 @@ public class PoupeeRusse extends Poupee {
     public void Leave(Poupee p) {
 
     }
-    public void AddRussianDoll(){
+    @Override
+    public void AddRussianDoll() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Entrez le nom de la première poupée : ");
-        String Name = scanner.nextLine();
-        setName(Name);
-        System.out.println("Entrez la couleur de la première poupée : ");
-        String Color = scanner.nextLine();
-        setColor(Color);
-        System.out.println("Entrez la taille de la première poupée : ");
-        int Taille = scanner.nextInt();
-        setTaille(Taille);
-        System.out.println("Entrez l'etat de la poupée : ");
-        Boolean isOpen = scanner.nextBoolean();
-        setIsOpen(isOpen);
+        System.out.println("Entrez le nom de la poupée : ");
+        String newName = scanner.nextLine();
+        this.setName(newName);
+        System.out.println("Entrez la couleur de la poupée : ");
+        String newColor = scanner.nextLine();
+        this.setColor(newColor);
+        System.out.println("Entrez la taille de la poupée : ");
+        int newTaille = scanner.nextInt();
+        this.setTaille(newTaille);
+        System.out.println("Entrez l'état de la poupée : ");
+        System.out.println("ouverir -> true / fermer -> false : ");
+        Boolean newisOpen = scanner.nextBoolean();
+        this.setIsOpen(newisOpen);
     }
 
-    public void Display(){
-        System.out.println("Name : "+getName()+" Color : " +getColor()+"Taille : "+getTaille()+" ouverte : "+getIsOpen());
-    }
 }

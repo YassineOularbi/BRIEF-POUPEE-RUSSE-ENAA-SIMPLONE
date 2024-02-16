@@ -16,6 +16,7 @@ public abstract class Poupee {
     public abstract void Close();
     public abstract void PlaceInto(Poupee p);
     public abstract void Leave (Poupee p);
+    public abstract void AddRussianDoll();
 }
 
 
